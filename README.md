@@ -1,7 +1,7 @@
 # shnthsalslied
 fork of schicksalslied for use with shbobo shnth
 
-<i>note: requires shnth library for norns, which can be found at</i> https://github.com/cfdrake/shnth
+<i>note: requires schicksalslied as well as the shnth library for norns; the latter can be found at</i> https://github.com/cfdrake/shnth
 
 shnthsalslied works in essentially the same way as schicksalslied, with one notable exception: rather than being sequenced according to the entered lines of text, 3 of the LiedMotor engine's voices (trisin, karplu, and resonz) are allocated to the shbobo shnth (bars, major buttons, and minor buttons, respectively). The frequencies at which these voices will play is determined by the entered lines of text. <br>
 <br>The first four characters entered will determine the frequencies triggered by the four bars. The next four characters will determine the frequencies triggered by the major buttons. And the next four will determine the frequencies triggered by the minor buttons. If there are 8 characters or fewer in the line, the minor buttons won't do anything. If there are 4 characters or fewer, the major buttons won't do anything either. And if there are fewer than 4 characters, only as many bars as there are characters will trigger notes.<br> 

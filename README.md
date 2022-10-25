@@ -6,4 +6,4 @@ shnthsalslied works in essentially the same way as schicksalslied, with one nota
 <br>For example, the word "the" will only imbue three bars with notes. The bars populate from left to right (as do the major and minor buttons), so in this example, the rightmost bar wouldn't do anything. And the word "a" would only imbue the leftmost bar with a note.<br>
 <br> <b>A Note on the Bars</b>
 
-Shnth's bars trigger LiedMotor's trisin voice. This is an FM voice. The depth of the bar press determines the voice's FM index. Consequently, unlike in schicksalslied, this parameter cannot be edited in params. Instead, the parameter is performed by the user on each bar press.
+Shnth's bars trigger LiedMotor's trisin voice. This is an FM voice. The depth of the bar press determines the voice's FM index. Consequently, unlike in schicksalslied, this parameter cannot be edited in params. Instead, the parameter is performed on each bar press.

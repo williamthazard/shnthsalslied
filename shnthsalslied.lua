@@ -493,12 +493,6 @@ function init()
   params:set_action('tritri',function(x) tritridiv=x end)
   params:add_control('ringer','ringer',controlspec.new(1,64,'lin',1,1,''))
   params:set_action('ringer',function(x) ringerdiv=x end)
-  params:add_control('trisin','trisin',controlspec.new(1,64,'lin',1,1,''))
-  params:set_action('trisin',function(x) trisindiv=x end)
-  params:add_control('karplu','karplu',controlspec.new(1,64,'lin',1,1,''))
-  params:set_action('karplu',function(x) karpludiv=x end)
-  params:add_control('resonz','resonz',controlspec.new(1,64,'lin',1,1,''))
-  params:set_action('resonz',function(x) resonzdiv=x end)
   params:add_control('softcut voice 1','softcut voice 1',controlspec.new(1,64,'lin',1,1,''))
   params:set_action('softcut voice 1',function(x) softonediv=x end)
   params:add_control('softcut voice 2','softcut voice 2',controlspec.new(1,64,'lin',1,1,''))
@@ -758,7 +752,7 @@ end
 
 function jfa_event()
   while true do
-    clock.sync((c:step(77)()/c:step(78)())*jfdiv)
+    clock.sync((c:step(77)()/c:step(78)())*firstjfdiv)
     if walking then
     crow.ii.jf.play_voice(1, c:step(79)()/12, j:step(80)())
     end
@@ -767,7 +761,7 @@ end
 
 function jfb_event()
   while true do
-    clock.sync((c:step(81)()/c:step(82)())*jfdiv)
+    clock.sync((c:step(81)()/c:step(82)())*secondjfdiv)
     if walking then
     crow.ii.jf.play_voice(2, c:step(83)()/12, j:step(84)())
     end
@@ -776,7 +770,7 @@ end
 
 function jfc_event()
   while true do
-    clock.sync((c:step(85)()/c:step(86)())*jfdiv)
+    clock.sync((c:step(85)()/c:step(86)())*thirdjfdiv)
     if walking then
     crow.ii.jf.play_voice(3, c:step(87)()/12, j:step(88)())
     end
@@ -785,7 +779,7 @@ end
 
 function jfd_event()
   while true do
-    clock.sync((c:step(89)()/c:step(90)())*jfdiv)
+    clock.sync((c:step(89)()/c:step(90)())*fourthjfdiv)
     if walking then
     crow.ii.jf.play_voice(4, c:step(91)()/12, j:step(92)())
     end
@@ -794,7 +788,7 @@ end
 
 function jfe_event()
   while true do
-    clock.sync((c:step(93)()/c:step(94)())*jfdiv)
+    clock.sync((c:step(93)()/c:step(94)())*fifthjfdiv)
     if walking then
     crow.ii.jf.play_voice(5, c:step(95)()/12, j:step(96)())
     end
@@ -803,7 +797,7 @@ end
 
 function jff_event()
   while true do
-    clock.sync((c:step(97)()/c:step(98)())*jfdiv)
+    clock.sync((c:step(97)()/c:step(98)())*sixthjfdiv)
     if walking then
     crow.ii.jf.play_voice(6, c:step(99)()/12, j:step(100)())
     end
@@ -812,7 +806,7 @@ end
 
 function run_event()
   while true do
-    clock.sync((c:step(101)()/c:step(102)())*jfdiv)
+    clock.sync((c:step(101)()/c:step(102)())*runjfdiv)
     if walking then
     crow.ii.jf.run(j:step(103)())
     end
@@ -821,7 +815,7 @@ end
 
 function quantize_event()
   while true do
-    clock.sync((c:step(104)()/c:step(105)())*jfdiv)
+    clock.sync((c:step(104)()/c:step(105)())*quantjfdiv)
     if walking then
     crow.ii.jf.quantize(c:step(106)())
     end
@@ -913,7 +907,7 @@ end
 
 function withsyna_event()
   while true do
-    clock.sync((c:step(175)()/c:step(176)())*wsyndiv)
+    clock.sync((c:step(175)()/c:step(176)())*firstwsyndiv)
     if walking then
     crow.ii.wsyn.play_voice(1, c:step(177)()/12, j:step(178)())
     end
@@ -922,7 +916,7 @@ end
 
 function withsynb_event()
   while true do
-    clock.sync((c:step(179)()/c:step(180)())*wsyndiv)
+    clock.sync((c:step(179)()/c:step(180)())*secondwsyndiv)
     if walking then
     crow.ii.wsyn.play_voice(1, c:step(181)()/12, j:step(182)())
     end
@@ -931,7 +925,7 @@ end
 
 function withsync_event()
   while true do
-    clock.sync((c:step(183)()/c:step(184)())*wsyndiv)
+    clock.sync((c:step(183)()/c:step(184)())*thirdwsyndiv)
     if walking then
     crow.ii.wsyn.play_voice(1, c:step(185)()/12, j:step(186)())
     end
@@ -940,7 +934,7 @@ end
 
 function withsynd_event()
   while true do
-    clock.sync((c:step(187)()/c:step(188)())*wsyndiv)
+    clock.sync((c:step(187)()/c:step(188)())*fourthwsyndiv)
     if walking then
     crow.ii.wsyn.play_voice(1, c:step(189)()/12, j:step(190)())
     end
